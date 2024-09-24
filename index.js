@@ -2,8 +2,9 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
 const port = 3010;
+
+app.use(cors());
 
 app.get('/calculate-returns', (req, res) => {
   const { boughtAt, marketPrice, quantity } = req.query;
